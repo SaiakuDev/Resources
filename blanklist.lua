@@ -1,4 +1,4 @@
-local s = {
+return {
 	true,
 	true,
 	true,
