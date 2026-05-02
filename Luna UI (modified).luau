@@ -1869,6 +1869,11 @@ local function Hide(Window, bind, notif)
 	SizeBleh = Window.Size
 	bind = string.split(tostring(bind), "Enum.KeyCode.")
 	bind = bind[2]
+    if UserInputService.KeyboardEnabled == true then
+        if notif then
+			Luna:Notification({Title = "Interface Hidden", Content = "The interface has been hidden, you may reopen the interface by Pressing the UI Bind In Settings ("..tostring(bind)..")", Icon = "visibility_off"})
+		end
+    end
 	tween(Window, {BackgroundTransparency = 1})
 	tween(Window.Elements, {BackgroundTransparency = 1})
 	tween(Window.Line, {BackgroundTransparency = 1})
